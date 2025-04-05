@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(45deg, #252525, #303030, #454545);
+}
+
+.container {
+    position: relative;
+    padding: 70px 40px;
+    background: #252525;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px #000;
+}
+
+.container h2 {
+    color: #aaaa;
+    margin-bottom: 45px;
+    line-height: 1em;
+    font-weight: 500;
+    padding-left: 10px;
+    border-left: 5px solid aqua;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    height: 46px;
+    margin-bottom: 35px;
+}
+
+.inputBox:last-child {
+    margin-bottom: 0;
+}
+
+.inputBox input {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #444;
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+    color: #444;
+    font-weight: 300;
+    transition: all 250ms;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: inline-block;
+    margin: 10px;
+    background: #252525;
+    background-attachment: fixed;
+    font-size: 16px;
+    color: #444;
+    font-weight: 300;
+    transition: 250ms;
+    pointer-events: none;
+}
+
+.inputBox input:hover {
+    border-color: aqua;
+}
+
+.inputBox input:last-child:hover{
+    color: aqua;
+}
+
+.inputBox input:focus {
+    border: 2px solid aqua;
+}
+
+.inputBox input:focus ~ label{
+    font-size: 12px;
+    color: aqua;
+    transform: translateY(-18px);
+}
+
+.inputBox input:valid ~ label {
+    font-size: 12px;
+    transform: translateY(-18px);
+}
+
+.inputBox input:hover ~ label {color: aqua}
+
+.error-message {
+    position: absolute;
+    top: 46px;
+    color: #ff4d4d;
+    font-size: 12px;
+}
+
+.inputBox input.error,
+.inputBox input.error:hover,
+.inputBox input.error:focus {
+    border-color: #ff4d4d;
+}
+
+.inputBox input.error:valid ~ label,
+.inputBox input.error:focus ~ label,
+.inputBox input.error:hover ~ label {
+    color: #ff4d4d;
+}
+
